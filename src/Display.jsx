@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { DisplayContext } from "./context/DisplayContext"
-import Login from "./pages/entry/Login"
+import Entry from "./pages/entry/Entry"
 
 function Display(){
 
@@ -8,7 +8,7 @@ function Display(){
 
     return(
         <>
-        <>{display == "login" && loggedUser == null && <Login />}</>
+        <>{display == "login" && loggedUser == null && <Entry />}</>
         <>{display == "login" && loggedUser != null && "principal"}</>
         </>
     )

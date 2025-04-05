@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import { DisplayContext } from '../../context/DisplayContext'
+import { DisplayContext } from '../../../context/DisplayContext'
 
 function Login() {
 
@@ -30,18 +30,18 @@ function Login() {
 
         try{
             const response = await fetch("http://localhost:8080/api/auth/login", {
-            method: "POST",
-            body:formData
-        })
+                method: "POST",
+                body:formData
+            })
 
-        if(response.ok){
-            const data = await response.json();
-            console.log(data)
-            setLoggedUser(data);
-        }else{
-            const data = await response.json();
-            setErrorMessage(data);
-        }
+            if(response.ok){
+                const data = await response.json();
+                console.log(data)
+                setLoggedUser(data);
+            }else{
+                const data = await response.json();
+                setErrorMessage(data);
+            }
 
         }catch(error){
             console.log(error);
@@ -51,11 +51,18 @@ function Login() {
 
     return (
         <>
-        <form onSubmit={handleLogin}>
+        <form className="login-form" onSubmit={handleLogin}>
             {errorMessage != null ? <div>Erro: {errorMessage.message}</div> : ""}
-            <input type="text" placeholder="email" value={emailInput} onChange={handleEmailChange}/>
-            <input type="password" placeholder="senha" value={passwordInput} onChange={handlePasswordChange}/>
-            <button type="submit">Login</button>
+            <div>
+                <label>E-mail</label>
+                <input className="input" type="text" placeholder="example@email.com" value={emailInput} onChange={handleEmailChange}/>
+            </div>
+            <div>
+                <label>Password</label>
+                <input className="input" type="password" placeholder="Password" value={passwordInput} onChange={handlePasswordChange}/>
+            </div>
+            <button className="submit" type="submit">Login</button>
+            <p className='mini-text'>Forget your password? <span>click here</span></p>
         </form>
         {loggedUser != null && <h2>{loggedUser.name}</h2>}
         </>
