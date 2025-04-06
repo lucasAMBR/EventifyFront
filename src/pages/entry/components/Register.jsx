@@ -40,6 +40,21 @@ function Register(){
         setProfilePicInput(e.target.files[0]);
     };
 
+    const clearInputs = () => {
+        setNameInput("");
+        setEmailInput("");
+        setCpfInput("");
+        setBirthInput("");
+        setContactInput("");
+        setPasswordInput("");
+        setProfilePicInput("");
+    }
+
+    const handleSwitchUserType = (type) => {
+        setUserType(type);
+        clearInputs();
+    }
+
     // Controla a requisição de cadastrar usuario normal
     const handleNormalUserSubmit = async(e) => {
         e.preventDefault();
@@ -78,7 +93,7 @@ function Register(){
                 <div className="switch-menu">
                     <p className="switch-title">You are a:</p>
                     <p className="switch-options">
-                        <span className={userType == "normal" ? "active" : ""} onClick={() => setUserType("normal")}>Regular user</span> | <span className={userType == "organizer" ? "active" : ""} onClick={() => setUserType("organizer")}>Organizer</span>
+                        <span className={userType == "normal" ? "active" : ""} onClick={() => handleSwitchUserType("normal")}>Regular user</span> | <span className={userType == "organizer" ? "active" : ""} onClick={() => handleSwitchUserType("organizer")}>Organizer</span>
                     </p>
                 </div>
                 {userType == "normal" && 
