@@ -1,5 +1,6 @@
-import { useState, useContext } from 'react'
-import { DisplayContext } from '../../../context/DisplayContext'
+import { useState, useContext } from 'react';
+import ErrorMessage from '../../../components/ErrorMessage';
+import { DisplayContext } from '../../../context/DisplayContext';
 
 function Login() {
 
@@ -52,7 +53,7 @@ function Login() {
     return (
         <>
         <form className="login-form" onSubmit={handleLogin}>
-            {errorMessage != null ? <div>Erro: {errorMessage.message}</div> : ""}
+            {errorMessage != null ? <ErrorMessage message={errorMessage.message}/> :  ""}
             <div>
                 <label>E-mail</label>
                 <input className="input" type="text" placeholder="example@email.com" value={emailInput} onChange={handleEmailChange}/>

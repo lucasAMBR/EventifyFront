@@ -1,0 +1,25 @@
+.error-message{
+    background-color: rgb(201, 86, 86);
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+
+.error-message p{
+    width: fit-content;
+    align-self: center;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.warning{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(32%) saturate(0%) hue-rotate(206deg) brightness(108%) contrast(100%);
+}

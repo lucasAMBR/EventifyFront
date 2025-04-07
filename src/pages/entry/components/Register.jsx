@@ -1,9 +1,11 @@
 import { useState } from "react";
+import ErrorMessage from "../../../components/ErrorMessage";
 
 function Register(){
 
     // Controle de carregamento
     const [ loading, setLoading ] = useState(false);
+    const [ errorMessage, setErrorMessage ] = useState(null);
 
     // Controla o tipo de registro
     const [ userType, setUserType ] = useState("normal");
@@ -59,6 +61,8 @@ function Register(){
     const handleNormalUserSubmit = async(e) => {
         e.preventDefault();
 
+        setErrorMessage(null)
+
         const formData = new FormData();
         formData.append("email", emailInput);
         formData.append("name", nameInput);
@@ -79,7 +83,8 @@ function Register(){
                 console.log(data);
                 setLoading(false)
             }else{
-                console.log("ERRO");
+                const data = await response.json();
+                setErrorMessage(data)
                 setLoading(false)
             }
         }catch(error){
@@ -98,6 +103,7 @@ function Register(){
                 </div>
                 {userType == "normal" && 
                 <form className="login-form" onSubmit={handleNormalUserSubmit}>
+                    {errorMessage != null ? <ErrorMessage message={errorMessage.message} /> : ""}
                     <div>
                         <label>Name</label>
                         <input type="text" className="input" placeholder="Your name" value={nameInput} onChange={handleNameChange}/>
