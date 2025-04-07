@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const DisplayContext = createContext();
 
 export function DisplayProvider({children}){
-    const [display, setDisplay] = useState("login");
+    const [display, setDisplay] = useState("entry");
     const [loggedUser, setLoggedUser] = useState(null)
 
     return(

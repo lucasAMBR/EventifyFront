@@ -8,8 +8,9 @@ function Display(){
 
     return(
         <>
-        <>{display == "login" && loggedUser == null && <Entry />}</>
-        <>{display == "login" && loggedUser != null && "principal"}</>
+        <>{display == "home" && "HOME PAGE"}</>
+        <>{display == "entry" && loggedUser == null && <Entry />}</>
+        <>{display == "entry" && loggedUser != null && "principal"}</>
         </>
     )
 }
