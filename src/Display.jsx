@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { DisplayContext } from "./context/DisplayContext"
 import Entry from "./pages/entry/Entry"
-import Header from "./pages/home/home"
+import Home from "./pages/home/Home"
 
 function Display(){
 
@@ -9,7 +9,7 @@ function Display(){
 
     return(
         <>
-        <>{display == "home" && <Header />}</>
+        <>{display == "home" && <Home />}</>
         <>{display == "entry" && loggedUser == null && <Entry />}</>
         <>{display == "entry" && loggedUser != null && "principal"}</>
         </>
