@@ -213,6 +213,10 @@
 
 
   }
+  .event-info button:hover {
+    background-color: #00695c;
+    transform: scale(1.03);
+  }
 
   @media (max-width: 768px) {
     .main {
