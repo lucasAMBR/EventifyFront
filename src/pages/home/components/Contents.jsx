@@ -1,5 +1,6 @@
 const Contents = () => {
 
+
     return (
         <div className="contantArea">
             <div className="textArea">
@@ -19,9 +20,17 @@ const Contents = () => {
                         CartTitle
                     </div>
                     <div className="CardDetails">
-                       <p>CardDetails</p>
-                       <p>CardDetails</p>
-                       <p>CardDetails</p>
+                        <div className="DetailsArea">   
+                        <div>                
+                            <p><img src = "/time.svg"/>25/10, 22:30</p>
+                            <p><img src = "/place.svg"/>São Paulo, SP, Brasil</p>                            
+                        </div>
+                        <div>    
+                            <p><img src = "/person.svg"/>Limite: 15.000 pessoas</p>
+                            <p><img src = "/person.svg"/>Classificacao indiativa</p>
+                        </div>
+                         </div>
+                       <div className="button2">Learn more about the project</div>
                     </div>
                 </div>
             </div>

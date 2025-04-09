@@ -1,5 +1,11 @@
+import { useContext } from 'react';
+import { DisplayContext } from '../../../context/DisplayContext';
+
 const Navbar = () => {
-    return (
+  
+  const {display, setDisplay} = useContext(DisplayContext);
+    
+  return (
       <header className="header">
         <img src="/LogoWhite.png" alt="Eventfy Logo" className="logo" />
         <nav className="nav">
@@ -7,7 +13,7 @@ const Navbar = () => {
           <a href="#" className="nav-link">User guide</a>
           <a href="#" className="nav-link">About us</a>
         </nav>
-        <button className="login-button">Login</button>
+        <button className="login-button" onClick={()=> setDisplay("entry")} >Login</button>
       </header>
     );
   };
