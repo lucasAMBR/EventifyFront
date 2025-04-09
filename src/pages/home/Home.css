@@ -20,6 +20,10 @@
     padding: 20px 40px;
     background-color: transparent;
   }
+
+  .header a{
+   cursor: pointer;
+  }
   
   .logo {
     height: 30px;
