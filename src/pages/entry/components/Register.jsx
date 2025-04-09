@@ -94,7 +94,7 @@ function Register(){
 
     return (
         <>
-                <>
+            <>
                 <div className="switch-menu">
                     <p className="switch-title">You are a:</p>
                     <p className="switch-options">
