@@ -27,10 +27,10 @@ const Lateral = () => {
                 <a href="#"><img src="/calendar.svg" /> Your events</a>
       </nav>
 
-      <button className="logout-button">
+      <div className="logout-button">
         <img src="/Logout.svg" alt="Logout" />
         Logout
-      </button>
+      </div>
     </aside>
   );
 };

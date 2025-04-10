@@ -8,7 +8,7 @@ import Lateral from '../../components/Lateral';
 
 const Feed = () => {
   return (
-    <div className = "HomePage">
+    <div className = "FeedPage">
       <Lateral />
       <Conteudo/>
     </div >

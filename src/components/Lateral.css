@@ -88,11 +88,12 @@
     cursor: pointer;
     padding: 20px 30px;
     border-top: 1px solid #145B58;
+    transition: 0.3s;
   }
 
-  .logout-button :hover{
-    opacity: 0.8;
-}
+  .logout-button:hover{
+    background-color: #145B58;
+  }
 
     
     .nav-links a img,
