@@ -14,6 +14,9 @@ const Navbar = () => {
         </a>
           <a href="#" className="nav-link">User guide</a>
           <a href="#" className="nav-link">About us</a>
+          <a className="nav-link" onClick={() => setDisplay("feed")}>
+          feed TEMPORARIO
+        </a>
         </nav>
         <button className="login-button" onClick={()=> setDisplay("entry")} >Login</button>
       </header>

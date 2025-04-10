@@ -1,0 +1,88 @@
+.lateral {
+    background-color: #004d40;
+    width: 220px;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-icon {
+    width: 160px;
+    height: auto;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .profile-Avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Remove o arredondamento */
+  }
+  
+  
+  .profile-name {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.8;
+  }
+  
+  .logout-button {
+    margin-top: auto;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .logout-button :hover{
+    opacity: 0.8;
+}
+
+    
+    .nav-links a img,
+    .logout-button img,
+    .profile-icon {
+        background-color: #D9D9D9; 
+        padding: 10px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+}
