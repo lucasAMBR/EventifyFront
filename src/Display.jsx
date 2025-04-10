@@ -1,6 +1,10 @@
 import { useContext } from "react"
 import { DisplayContext } from "./context/DisplayContext"
 import Entry from "./pages/entry/Entry"
+import Home from "./pages/home/Home"
+import Events from "./pages/events/Events";
+import Feed from "./pages/feed/Feed";
+
 
 function Display(){
 
@@ -8,9 +12,11 @@ function Display(){
 
     return(
         <>
-        <>{display == "home" && "HOME PAGE"}</>
-        <>{display == "entry" && loggedUser == null && <Entry />}</>
-        <>{display == "entry" && loggedUser != null && "principal"}</>
+         {display === "home" && <Home />}
+         {display === "events" && <Events />}
+         {display === "feed" && <Feed />}
+         {display === "entry" && loggedUser === null && <Entry />}
+         {display === "entry" && loggedUser !== null && <div>principal</div>}
         </>
     )
 }
