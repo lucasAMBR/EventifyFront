@@ -3,7 +3,9 @@ import "./Conteudo.css";
 
 const Conteudo = () => {
   return (
-<div className="test"><h1>asdasdbiasd</h1></div>
+  <div className="feed">
+    <h1>asdasdbiasd</h1>
+  </div>
   );
 };
 

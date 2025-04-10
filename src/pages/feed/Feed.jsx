@@ -1,16 +1,15 @@
 
 import React from 'react';
 import "./Feed.css"
-import "./Main.css";
-import Lateral from '../../components/lateral';
 import Conteudo from './components/Conteudo';
+import Lateral from '../../components/Lateral';
 
 
 
 const Feed = () => {
   return (
     <div className = "HomePage">
-      <Lateral/>
+      <Lateral />
       <Conteudo/>
     </div >
   );
