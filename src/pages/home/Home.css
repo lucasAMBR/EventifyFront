@@ -15,29 +15,39 @@
   /* Header Styles */
   .header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
     background-color: transparent;
+    max-height: 100px;
   }
 
   .header a{
    cursor: pointer;
   }
   
-  .logo {
-    height: 30px;
+  .main_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main_logo img {
+    width: 200px;
   }
   
   .nav {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
   }
   
   .nav-link {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    height: 100%;
   }
   
   .login-button {
@@ -219,6 +229,46 @@
   }
 
   
+  @media (min-width: 1281px) {
+
+    .HomePage{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .contantArea{
+      padding-top: 60px;
+    }
+
+    .CartTitle{
+      padding-left: 25px;
+    }
+
+    .CardDetails{
+      padding-left: 15px;
+    }
+
+    .DetailsArea{
+      flex-direction: column;
+    }
+
+    .textArea h1{
+      max-width: 700px;
+    }
+
+    .contantArea{
+      height: 100%;
+    }
+
+    .textArea p{
+      max-width: 700px;
+    }
+    .Card{
+      height: 600px;
+    }
+
+  }
 
   @media (max-width: 768px) {
     .main {
