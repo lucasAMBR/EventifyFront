@@ -7,7 +7,9 @@ const Navbar = () => {
     
   return (
       <header className="header">
-        <img src="/LogoWhite.png" alt="Eventfy Logo" className="logo" />
+        <div className='main_logo'>
+          <img src='/LogoWhite.png' />
+        </div>
         <nav className="nav">
         <a className="nav-link" onClick={() => setDisplay("events")}>
           Search events
